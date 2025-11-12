@@ -12,8 +12,7 @@ def start_order():
         try:
             print("\n--- Shifts ---\n1. Morning shift\n2. Afternoon shift\n")
 
-            shift = input(
-                "Are you in the morning or afternoon shift?: ").strip()
+            shift = input("Are you in the morning or afternoon shift?: ").strip()
 
             if shift == "1":
                 morning_shift()
@@ -122,8 +121,7 @@ def pay_order():
     while True:
         try:
 
-            transfer = input(
-                "\nDo you want to pay by transfer? (y/n): ").lower()
+            transfer = input("\nDo you want to pay by transfer? (y/n): ").lower()
 
             if transfer == "y":
                 print("\nYour order is confirmed and paid")
@@ -154,17 +152,14 @@ def pay_order():
                     continue
 
             elif answer == "n":
-                print(
-                    "\nThe delivery didn’t arrive, you send a complaint to the restaurant")
+                print("\nThe delivery didn’t arrive, you send a complaint to the restaurant")
 
                 if transfer == "y":
-                    print(
-                        "Restaurant response: We’ll refund your transfer payment, sorry fot the inconvenient")
+                    print("Restaurant response: We’ll refund your transfer payment, sorry fot the inconvenient")
                     break
 
                 elif transfer == "n":
-                    print(
-                        "Restaurant response: Sorry for the issue you'll have a 50% discount coupon")
+                    print("Restaurant response: Sorry for the issue you'll have a 50% discount coupon")
                     break
 
                 else:
@@ -173,6 +168,5 @@ def pay_order():
 
         except ValueError:
             print("Invalid data")
-
 
 start_order()
